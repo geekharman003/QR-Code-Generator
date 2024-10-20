@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="images/code-pastel_glyph-32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/cddd992ecc.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="wrapper">
+        <h2 class="card-heading">QR Code Generator</h2>
+        <span class="toggler"
+          ><i
+            class="fa-regular fa-moon fa-rotate-by fa-xl"
+            style="--fa-rotate-angle: -20deg"
+          ></i
+        ></span>
+      </div>
+      <div class="input-wrapper">
+        <label for="url">Enter URL or text</label>
+        <input
+          type="text"
+          id="url"
+          required
+          minlength="1"
+          placeholder="https://example.com"
+        />
+      </div>
+      <div class="customization-container">
+        <div class="input-wrapper">
+          <label for="img-size">Image Size</label>
+          <select name="img-size" id="img-size" onchange="handleImgSize()">
+            <option value="">100x100</option>
+            <option value="">200x200</option>
+            <option value="">300x300</option>
+            <option disabled value="">400x400</option>
+            <option disabled value="">500x500</option>
+      
+          </select>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="fg-color">Foreground Color</label>
+          <input
+            type="color"
+            name="fg-color"
+            onchange="handleColor()"
+            id="fg-color"
+            value="#000"
+          />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="bg-color"> Background Color </label>
+          <input
+            type="color"
+            name="bg-color"
+            onchange="handleColor()"
+            id="bg-color"
+            value="#ffffff"
+          />
+        </div>
+      </div>
+
+      <button class="btn generate-btn" disabled>Generate QR Code</button>
+      <div class="QR-code-details">
+        <img id="qr-code-img" src="" alt="" />
+
+        <a class="download-img-link" href="" download>
+          <button type="button" class="btn save-btn">Save QR Code</button>
+        </a>
+      </div>
+      <p>Scan the QR code with your smartphone camera</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

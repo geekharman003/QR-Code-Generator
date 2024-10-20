@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+font-family: "DM Sans", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    width: 600px ;
+    min-height: 50vh;
+    background-color:#fff;
+    padding: 2rem;
+    border: 1px solid #87868644;
+    border-radius: 5px;
+}
+
+.wrapper{
+    /* align-self: center; */
+    text-align: center;
+
+}
+
+.card-heading{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+.toggler{
+    background-color: black;
+    border-radius: 100%;
+    padding: 1rem;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+
+.dark-mode-toggler{
+    background-color: #fff;
+    color: #000;
+}
+
+
+.dark-mode{
+    background-color: #111827;
+    color: #fff;
+}
+
+
+.toggler:hover{
+background-color: rgb(248, 246, 246);
+color: #000;
+cursor: pointer;
+border: 1px solid rgb(201, 199, 199);
+}
+
+
+.input-wrapper{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input{
+    padding: 1rem;
+    font-size: inherit;
+    border-radius: 5px;
+    background: rgb(244, 243, 243);
+}
+
+.customization-container{
+    display: flex;
+    /* gap: 1rem; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input,select{
+    border: 1px solid rgb(201, 199, 199);
+}
+
+
+input:focus,select:focus{
+     border: 2px solid #cb9af5;
+    outline: 2px solid gray;
+    outline-offset: 2px;
+}
+
+input[type="color"]{
+    width: 14rem;
+    height: 4rem;
+    padding: 0.3rem;
+    background-color: transparent;
+}
+
+
+select{
+    width: 14rem;
+    padding: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 5px;
+}
+
+.btn{
+    margin-top: 1.5rem;
+    padding: 1rem; 
+    color: #fff;
+    font-weight: 900;
+    border: 0;
+    border-radius: 5px;
+}
+
+.generate-btn{
+    background: #cb9af5;
+}
+
+.save-btn{
+    background: #20c55d;
+    width: 100%;
+}
+
+.QR-code-details{
+    text-align: center;
+    margin-top: 2rem;
+
+    /* width: 100%; */
+    padding: 1rem;
+    background-color: rgb(244, 243, 243);
+    display: none;
+}
+
+.qr-code-img{
+    width: 100%;
+}
+
+p{
+    margin-top: 8rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+
+@media screen and(min-width:640px) {
+    
+}
